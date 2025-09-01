@@ -1,0 +1,194 @@
+@import url('https://fonts.cdnfonts.com/css/rog-lyonstype');
+
+/* Color Variables */
+:root {
+  --primary-color: #0cbe9b;
+  --secondary-color: #0a85d8;
+  --highlight-color: #f75c03;
+  --text-color: white;
+  --hover-color: red;
+  --shadow-color: #888;
+}
+
+header {
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  padding: 0; /* Remove any padding */
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+body {
+  font-family: 'ROG LyonsType', sans-serif;
+  margin: 0; /* remove all body margin */
+}
+
+h1, h2 {
+  font-family: 'ROG LyonsType', cursive;
+  color: black;
+}
+
+header h1 {
+  font-family: "ROG LyonsType", cursive;
+  font-size: 4rem; /* Use relative units */
+  font-weight: lighter;
+  color: inherit;
+  margin: 0; /* Remove any margin */
+  padding-left: 10px; /* Adjust padding to control spacing */
+}
+
+nav {
+  background-color: var(--secondary-color);
+  border-top: solid black thin;
+  border-bottom: solid black thin;
+  display: flex; /* Display the children of this element as flexible boxes */
+  box-shadow: 0px 2px var(--shadow-color);
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+nav p {
+  flex: 1 1 100px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+
+footer {
+  background-color: var(--secondary-color); /* background or background-color both work */
+  position: fixed; /* fix to the viewport */
+  bottom: 0; /* start 0 pixels from the bottom of the viewport */
+  left: 0; /* start 0 pixels from the left of the viewport */
+  width: 100%; /* set the width to 100% of the viewport */
+  height: 3em; /* set the footer element's height to 3 times larger than its current font size */
+  border-top: solid black thin; /* have to put the unit, e.g. px or %, if not zero */
+  box-shadow: 0px -2px var(--shadow-color);
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+main {
+  margin: 0 1em 6em 1em; /* Increase bottom margin to 6em */
+  position: relative;
+  z-index: 1; /* Ensure the content is above the video */
+  background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+}
+
+.center {
+  text-align: center;
+}
+
+.float {
+  float: right;
+}
+
+.small {
+  font-size: smaller;
+}
+
+.italics {
+  font-style: italic;
+}
+
+#animatedButton {
+  display: inline-block; /* Make the <a> behave like a button */
+  padding: 15px 30px; /* Add padding for clickable area */
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0; /* Optional: Adjust border radius */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  transition: all 0.3s ease-in-out;
+}
+
+#animatedButton:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+  transform: scale(1.05); /* Add hover effect */
+}
+
+#animatedButton a {
+  display: block; /* Make the <a> tag behave like a block element */
+  width: 100%; /* Ensure it spans the full width of the button */
+  height: 100%; /* Ensure it spans the full height of the button */
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Inherit the text color from the button */
+}
+
+/* Style for the video background */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire screen */
+  z-index: -1; /* Places the video behind all other content */
+  pointer-events: none; /* Prevents interaction with the video */
+}
+
+/* Loading Screen Styles */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Optional: Add a background color */
+  z-index: 9999; /* Ensure it appears above all other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading-video {
+  width: 100%; /* Make the video cover the screen */
+  height: auto;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
